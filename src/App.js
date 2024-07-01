@@ -9,7 +9,7 @@ export default class App extends Component {
       <>
         <Navbar title="Readico" />
         <div className="container">
-          <News />
+          <News pageSize="5" />
         </div>
       </>
     );
