@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Readics-React/static/css/main.f8367389.css",
+    "main.js": "/Readics-React/static/js/main.526965af.js",
+    "static/js/453.d3897fb9.chunk.js": "/Readics-React/static/js/453.d3897fb9.chunk.js",
+    "static/media/bg1.gif": "/Readics-React/static/media/bg1.9584edf992e5bdb2d7f6.gif",
+    "static/media/loading.gif": "/Readics-React/static/media/loading.0450749b1365d3e8934f.gif",
+    "index.html": "/Readics-React/index.html",
+    "main.f8367389.css.map": "/Readics-React/static/css/main.f8367389.css.map",
+    "main.526965af.js.map": "/Readics-React/static/js/main.526965af.js.map",
+    "453.d3897fb9.chunk.js.map": "/Readics-React/static/js/453.d3897fb9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8367389.css",
+    "static/js/main.526965af.js"
+  ]
+}
