@@ -1,30 +1,61 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-export class NewsItems extends Component {
-  render() {
-    let { title, description, imageUrl, newsUrl } = this.props;
-    return (
-      <div className="card" style={{ width: "18rem" }}>
-        <img
-          src={
-            !imageUrl
-              ? "https://media.istockphoto.com/id/1311148884/vector/abstract-globe-background.jpg?s=612x612&w=0&k=20&c=9rVQfrUGNtR5Q0ygmuQ9jviVUfrnYHUHcfiwaH5-WFE="
-              : imageUrl
-          }
-          className="card-img-top"
-          alt="..."
-          style={{ height: "180px" }}
-        />
-        <div className="card-body">
-          <h6 className="card-title">{title}</h6>
-          <p className="card-text">{description}...</p>
-          <a href={newsUrl} target="_blank" className="btn btn-primary">
-            Read more
-          </a>
-        </div>
+const NewsItems = ({
+  title,
+  description,
+  imageUrl,
+  newsUrl,
+  author,
+  date,
+  sources,
+}) => {
+  return (
+    <div className="card">
+      <img
+        src={
+          !imageUrl
+            ? "https://www.shutterstock.com/shutterstock/photos/1928997539/display_1500/stock-vector-breaking-news-template-with-d-red-and-blue-badge-breaking-news-text-on-dark-blue-with-earth-and-1928997539.jpg"
+            : imageUrl
+        }
+        className="card-img-top"
+        alt="news"
+      />
+      <span
+        className="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
+        style={{ left: "90%", zIndex: 1 }}
+      >
+        {sources}
+      </span>
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}...</p>
+        <p className="card-text">
+          <small className="text-muted">
+            By {author ? author : "Unknown"} on {new Date(date).toGMTString()}
+          </small>
+        </p>
+        <a
+          href={newsUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-primary"
+        >
+          Read More
+        </a>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+NewsItems.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  imageUrl: PropTypes.string,
+  newsUrl: PropTypes.string.isRequired,
+  author: PropTypes.string,
+  date: PropTypes.string,
+  sources: PropTypes.string,
+};
 
 export default NewsItems;
