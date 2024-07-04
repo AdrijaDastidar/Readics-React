@@ -12,7 +12,7 @@ export default class App extends Component {
         <div className="container">
           <Routes>
             <Route
-              path="/"
+              path="/Readics-React"
               element={
                 <News
                   heading="Top Headlines"
