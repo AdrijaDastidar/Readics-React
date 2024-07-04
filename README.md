@@ -16,6 +16,12 @@ Readics is a web application designed to deliver up-to-date news articles across
 - News API
 - Bootstrap (for styling)
 
+## Screenshots 
+![Screenshot 1](./image/image3.png)
+![Screenshot 2](./image/image2.png)
+![Screenshot 3](./image/image1.png)
+
+
 ## Acknowledgements
 
 This project utilizes the **News API** for fetching news data.
