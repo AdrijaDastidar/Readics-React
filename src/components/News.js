@@ -4,6 +4,8 @@ import Loading from "./Loading";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
+
+// TODO: Add the API which can be hosted 
 export class News extends Component {
   static defaultProps = {
     country: "in",
