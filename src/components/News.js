@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 // TODO: Add API which supports hosting (currently using newsapi)
-// News component to display a list of news articles
+//* News component to display a list of news articles
 export class News extends Component {
   // Default props if none are provided
   static defaultProps = {
