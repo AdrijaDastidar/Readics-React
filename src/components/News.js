@@ -4,9 +4,10 @@ import Loading from "./Loading";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
-// TODO: Add the API which can be hosted 
+// TODO: Add API which supports hosting (currently using newsapi)
+// News component to display a list of news articles
 export class News extends Component {
+  // Default props if none are provided
   static defaultProps = {
     country: "in",
     category: "general",
@@ -14,6 +15,7 @@ export class News extends Component {
     heading: "Top Headlines",
   };
 
+  // Prop types for validation
   static propTypes = {
     country: PropTypes.string,
     category: PropTypes.string,
@@ -21,6 +23,7 @@ export class News extends Component {
     heading: PropTypes.string.isRequired,
   };
 
+  // Constructor to initialize state
   constructor() {
     super();
     this.state = {
@@ -31,10 +34,12 @@ export class News extends Component {
     };
   }
 
+  // Fetch news articles when the component mounts
   componentDidMount() {
     this.fetchNews();
   }
 
+  // Function to fetch news articles from the API
   fetchNews = async () => {
     this.setState({ loading: true });
     const { page } = this.state;
@@ -47,6 +52,7 @@ export class News extends Component {
       }
       let data = await response.json();
       if (data.status === "ok") {
+        // Update state with new articles
         this.setState((prevState) => ({
           articles:
             page === 1
@@ -65,6 +71,7 @@ export class News extends Component {
     }
   };
 
+  // Function to fetch more data when user scrolls down
   fetchMoreData = () => {
     this.setState(
       (prevState) => ({
